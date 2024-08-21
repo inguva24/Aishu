@@ -1,0 +1,142 @@
+Conversation with Cloud SMB Chat Support
+Started on August 2, 2024 at 03:32 PM Central Time (US & Canada) time CDT (GMT-0500)
+
+---
+
+03:32 PM | Aswini Mortha: I need help with a technical issue
+
+03:32 PM | Operator: Hi there! Thanks for contacting Cloud SMB Chat Support. We’re importing the information you provided. An agent will join shortly to assist you.
+
+03:32 PM | Aswini Mortha: Hi Team,
+
+I'm unable to configure a Multi cascading list type field on JSM Forms.
+
+Kindly assist ASAP
+
+Thank you
+
+03:33 PM | Angel from Cloud SMB Chat Support: Hello Aswini! 
+ Thanks for reaching out to Atlassian Support! 
+ My name is Angel and I'm the Support Engineer that will be helping you today
+
+03:33 PM | Aswini Mortha: Hi Again
+
+03:33 PM | Angel from Cloud SMB Chat Support: What seems to be the problem?
+
+03:33 PM | Aswini Mortha: I tried the conditional section on Forms
+
+03:34 PM | Aswini Mortha: but it is not showing the exact pick list for the second section
+
+03:34 PM | Angel from Cloud SMB Chat Support: What is the FORM url
+
+03:34 PM | Aswini Mortha: Looks like it is dependent on the previous section
+
+03:34 PM | Angel from Cloud SMB Chat Support: It is, that's how Conditional Forms work
+
+03:34 PM | Aswini Mortha: https://oaktree-capital.atlassian.net/jira/servicedesk/projects/PIT/settings/forms/form/2/edit
+
+03:35 PM | Angel from Cloud SMB Chat Support: What is the expectation of the form?
+
+03:35 PM | Aswini Mortha: https://oaktree-capital.atlassian.net/browse/AI-698
+
+03:35 PM | Aswini Mortha: Please go through the above Jira ticket as well from my client
+
+03:36 PM | Aswini Mortha: We need a Cascading list field like our "Requestor Department" field on Jira Software
+
+03:37 PM | Angel from Cloud SMB Chat Support: That particular ticket is a Software project , Software projects are different and the same does not apply for those projects
+
+03:38 PM | Aswini Mortha: Yeah, we are maintaining the requests from clients on the Jira software board, now we are trying to create a form on JSM to shift
+
+03:38 PM | Aswini Mortha: There we need the same type of field like "Requestor Department"
+
+03:39 PM | Angel from Cloud SMB Chat Support: Custom fields are global, you can just create a Cascading field and configure it in the same way and add it to your JSM project
+
+03:39 PM | Angel from Cloud SMB Chat Support: - https://support.atlassian.com/jira-cloud-administration/docs/create-a-custom-field/
+
+03:40 PM | Aswini Mortha: can we use the custom field on forms too?
+
+03:40 PM | Angel from Cloud SMB Chat Support: [Image "image.png?expires=1722634200&signature=06344c01afd412e481ed96c532585867b3dfc7fe2e83e85ee85882512417c563"]
+
+03:41 PM | Angel from Cloud SMB Chat Support: No you cannot, unfortunately on Forms, there is no way to re-create these Cascading fields currently
+
+03:41 PM | Angel from Cloud SMB Chat Support: The closes you can get is with conditional fields
+
+03:42 PM | Aswini Mortha: yeah but the conditional fields are dependent it seems
+
+03:42 PM | Angel from Cloud SMB Chat Support: [Image "image.png?expires=1722634200&signature=8c0349bdefcf72bd7689e97a6d164edb9fd7ca263ec7b2ebe0937a5517aeb030"]
+
+03:43 PM | Angel from Cloud SMB Chat Support: The first dropdown you will create will be one that has the main options
+
+03:43 PM | Angel from Cloud SMB Chat Support: I.E "Client Relations"
+
+03:44 PM | Angel from Cloud SMB Chat Support: Then if in that field "Client Relations" is selected, shown a section with a dropdown that has all of the child options 
+ [Image "image.png?expires=1722634200&signature=d1858af18c29d48f41fd8b35f59520e7a4dcb3166f4e040a89a11a83cb3ad6d9"]
+
+03:44 PM | Angel from Cloud SMB Chat Support: And so on for the other options
+
+03:44 PM | Angel from Cloud SMB Chat Support: that is the closes you can get currently
+
+03:45 PM | Angel from Cloud SMB Chat Support: Unfortunately there is no workaround at this point, other than this approach
+
+03:45 PM | Aswini Mortha: Can you please allow me to upload a screenshot
+
+03:46 PM | Angel from Cloud SMB Chat Support: Certainly 
+ [App: Attachments]
+
+03:46 PM | Aswini Mortha: Uploaded the following file(s): JSM Forms field.PNG
+
+03:47 PM | Aswini Mortha: can you please go through the preview screenshot of the form which I built
+
+03:47 PM | Angel from Cloud SMB Chat Support: Yes, I can see it
+
+03:48 PM | Angel from Cloud SMB Chat Support: Seems correct as per your conditions
+
+03:49 PM | Aswini Mortha: When I select Data & Architecture it should show the Same field options right, but it is giving the clients & Marketing field options
+
+03:50 PM | Aswini Mortha: Once I fill the clients & marketing field values then only I'm getting Data & Architecture
+
+03:50 PM | Angel from Cloud SMB Chat Support: [Image "image.png?expires=1722634200&signature=30c0694293979018242a86ba114586786bf6047c588c3decb7c76dfd81330100"]
+
+03:51 PM | Angel from Cloud SMB Chat Support: Yes, it shows that because the option was added to the section that would show Client & Marketing fields
+
+03:51 PM | Angel from Cloud SMB Chat Support: If you do not want that section you need to move that option to the below section
+
+03:51 PM | Angel from Cloud SMB Chat Support: Sections show the fields below the section when created depending on the options
+
+03:51 PM | Angel from Cloud SMB Chat Support: So it was set incorrectly
+
+03:52 PM | Angel from Cloud SMB Chat Support: Once that is fixed you should be seeing the correct section when selected
+
+03:53 PM | Aswini Mortha: Kindly explain where I did a mistake
+
+03:54 PM | Angel from Cloud SMB Chat Support: You put the "Data & Architecture" Option on the section that displays the Client & Marketing field
+
+03:54 PM | Angel from Cloud SMB Chat Support: see the screenshot previously attached
+
+03:54 PM | Angel from Cloud SMB Chat Support: That one goes in the section below
+
+03:55 PM | Aswini Mortha: ok I should add the primary field section separated for each option
+
+03:58 PM | Angel from Cloud SMB Chat Support: No, the order is incorrect
+
+03:58 PM | Angel from Cloud SMB Chat Support: You have: 
+ 
+ - Field you want to display 
+- Then section
+
+03:58 PM | Angel from Cloud SMB Chat Support: Its the other way around
+
+03:58 PM | Aswini Mortha: Yeah, got it now
+
+03:59 PM | Angel from Cloud SMB Chat Support: The section goes first
+
+03:59 PM | Angel from Cloud SMB Chat Support: then the fields you want to display within that section
+
+03:59 PM | Angel from Cloud SMB Chat Support: Apologies, my internet went out for a bit that why I took a bit
+
+03:59 PM | Angel from Cloud SMB Chat Support: Once you have the order correctly it will work without a problem
+
+04:02 PM | Angel from Cloud SMB Chat Support: Is there anything further I can assist you with today?
+
+---
+Exported from Cloud SMB Chat Support on August 2, 2024 at 04:02 PM Central Time (US & Canada) time CDT (GMT-0500)
